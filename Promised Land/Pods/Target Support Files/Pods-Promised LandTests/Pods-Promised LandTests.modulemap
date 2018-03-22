@@ -1,0 +1,6 @@
+framework module Pods_Promised_LandTests {
+  umbrella header "Pods-Promised LandTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

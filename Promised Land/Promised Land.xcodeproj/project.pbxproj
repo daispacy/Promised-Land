@@ -1,0 +1,884 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		750AFA47ABF30E934DCC6835 /* Pods_Promised_Land.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC2765C312AA834BE498F0B /* Pods_Promised_Land.framework */; };
+		8AEBC077E5FD33B90085C9DE /* Pods_Promised_LandTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401992D818EF0C3EB4D644C8 /* Pods_Promised_LandTests.framework */; };
+		CEE27F98206236EF00C0383B /* location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = CEE27F97206236EF00C0383B /* location.gpx */; };
+		D7252C83206135A200AFDDF2 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7252C82206135A200AFDDF2 /* MapController.swift */; };
+		D7252C8520613C8200AFDDF2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7252C8420613C8200AFDDF2 /* MapKit.framework */; };
+		D7252C872061572400AFDDF2 /* MonitorLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7252C862061572400AFDDF2 /* MonitorLocation.swift */; };
+		D7252C8C206168C500AFDDF2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7252C8B206168C500AFDDF2 /* CoreLocation.framework */; };
+		D75BEFC42063AC890070F05F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75BEFC32063AC890070F05F /* GoogleService-Info.plist */; };
+		D75BEFC62063B5A50070F05F /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BEFC52063B5A50070F05F /* Server.swift */; };
+		D78129802060FCEA002E9FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D781297F2060FCEA002E9FA9 /* AppDelegate.swift */; };
+		D78129852060FCEA002E9FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78129832060FCEA002E9FA9 /* Main.storyboard */; };
+		D78129872060FCEA002E9FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78129862060FCEA002E9FA9 /* Assets.xcassets */; };
+		D781298A2060FCEA002E9FA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78129882060FCEA002E9FA9 /* LaunchScreen.storyboard */; };
+		D78129952060FCEA002E9FA9 /* Promised_LandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78129942060FCEA002E9FA9 /* Promised_LandTests.swift */; };
+		D78129A02060FCEA002E9FA9 /* Promised_LandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D781299F2060FCEA002E9FA9 /* Promised_LandUITests.swift */; };
+		D78129B1206104B0002E9FA9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78129AE206104B0002E9FA9 /* Extensions.swift */; };
+		D78129B32061074A002E9FA9 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78129B22061074A002E9FA9 /* WelcomeController.swift */; };
+		D79A3E702062498E0061DAA4 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79A3E6E2062498D0061DAA4 /* MessageController.swift */; };
+		D79A3E712062498E0061DAA4 /* MessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79A3E6F2062498D0061DAA4 /* MessageController.xib */; };
+		EE14658E313049FA8B8E4943 /* Pods_Promised_LandUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DDC7EAECC4B2632E06204C4 /* Pods_Promised_LandUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D78129912060FCEA002E9FA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D78129742060FCEA002E9FA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D781297B2060FCEA002E9FA9;
+			remoteInfo = "Promised Land";
+		};
+		D781299C2060FCEA002E9FA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D78129742060FCEA002E9FA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D781297B2060FCEA002E9FA9;
+			remoteInfo = "Promised Land";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3EF201D3380809BFA956718B /* Pods-Promised LandUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promised LandUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Promised LandUITests/Pods-Promised LandUITests.release.xcconfig"; sourceTree = "<group>"; };
+		401992D818EF0C3EB4D644C8 /* Pods_Promised_LandTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promised_LandTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F07C45C37B73AFB48F2C0D /* Pods-Promised LandTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promised LandTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Promised LandTests/Pods-Promised LandTests.debug.xcconfig"; sourceTree = "<group>"; };
+		742ACE49E3B79C0ED4F0F766 /* Pods-Promised LandUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promised LandUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Promised LandUITests/Pods-Promised LandUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7BF56549BF9529256148FF85 /* Pods-Promised Land.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promised Land.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Promised Land/Pods-Promised Land.debug.xcconfig"; sourceTree = "<group>"; };
+		98F1B7CE97DCA4ED40C0F2AD /* Pods-Promised LandTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promised LandTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Promised LandTests/Pods-Promised LandTests.release.xcconfig"; sourceTree = "<group>"; };
+		9BC2765C312AA834BE498F0B /* Pods_Promised_Land.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promised_Land.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DDC7EAECC4B2632E06204C4 /* Pods_Promised_LandUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promised_LandUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE27F97206236EF00C0383B /* location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = location.gpx; sourceTree = "<group>"; };
+		D7252C82206135A200AFDDF2 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		D7252C8420613C8200AFDDF2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D7252C862061572400AFDDF2 /* MonitorLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorLocation.swift; sourceTree = "<group>"; };
+		D7252C8B206168C500AFDDF2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D75836FA2061735C0035EE28 /* Promised Land.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Promised Land.entitlements"; sourceTree = "<group>"; };
+		D75BEFC32063AC890070F05F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D75BEFC52063B5A50070F05F /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		D781297C2060FCEA002E9FA9 /* Promised Land.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Promised Land.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D781297F2060FCEA002E9FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D78129842060FCEA002E9FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D78129862060FCEA002E9FA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D78129892060FCEA002E9FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D781298B2060FCEA002E9FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D78129902060FCEA002E9FA9 /* Promised LandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Promised LandTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78129942060FCEA002E9FA9 /* Promised_LandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promised_LandTests.swift; sourceTree = "<group>"; };
+		D78129962060FCEA002E9FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D781299B2060FCEA002E9FA9 /* Promised LandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Promised LandUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D781299F2060FCEA002E9FA9 /* Promised_LandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promised_LandUITests.swift; sourceTree = "<group>"; };
+		D78129A12060FCEA002E9FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D78129AE206104B0002E9FA9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D78129B22061074A002E9FA9 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		D79A3E6E2062498D0061DAA4 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		D79A3E6F2062498D0061DAA4 /* MessageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageController.xib; sourceTree = "<group>"; };
+		ECAE534C336A93F6A9BBBFB4 /* Pods-Promised Land.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promised Land.release.xcconfig"; path = "Pods/Target Support Files/Pods-Promised Land/Pods-Promised Land.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D78129792060FCEA002E9FA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7252C8C206168C500AFDDF2 /* CoreLocation.framework in Frameworks */,
+				D7252C8520613C8200AFDDF2 /* MapKit.framework in Frameworks */,
+				750AFA47ABF30E934DCC6835 /* Pods_Promised_Land.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D781298D2060FCEA002E9FA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AEBC077E5FD33B90085C9DE /* Pods_Promised_LandTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78129982060FCEA002E9FA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE14658E313049FA8B8E4943 /* Pods_Promised_LandUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75EB17FB52313B22BB9CA537 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7252C8B206168C500AFDDF2 /* CoreLocation.framework */,
+				D7252C8420613C8200AFDDF2 /* MapKit.framework */,
+				9BC2765C312AA834BE498F0B /* Pods_Promised_Land.framework */,
+				401992D818EF0C3EB4D644C8 /* Pods_Promised_LandTests.framework */,
+				9DDC7EAECC4B2632E06204C4 /* Pods_Promised_LandUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0122D8BDF9415381827DE42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BF56549BF9529256148FF85 /* Pods-Promised Land.debug.xcconfig */,
+				ECAE534C336A93F6A9BBBFB4 /* Pods-Promised Land.release.xcconfig */,
+				55F07C45C37B73AFB48F2C0D /* Pods-Promised LandTests.debug.xcconfig */,
+				98F1B7CE97DCA4ED40C0F2AD /* Pods-Promised LandTests.release.xcconfig */,
+				742ACE49E3B79C0ED4F0F766 /* Pods-Promised LandUITests.debug.xcconfig */,
+				3EF201D3380809BFA956718B /* Pods-Promised LandUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D78129732060FCEA002E9FA9 = {
+			isa = PBXGroup;
+			children = (
+				CEE27F97206236EF00C0383B /* location.gpx */,
+				D78129AD206104B0002E9FA9 /* Extensions */,
+				D78129B0206104B0002E9FA9 /* Support */,
+				D78129AF206104B0002E9FA9 /* ViewControllers */,
+				D781297E2060FCEA002E9FA9 /* Promised Land */,
+				D78129932060FCEA002E9FA9 /* Promised LandTests */,
+				D781299E2060FCEA002E9FA9 /* Promised LandUITests */,
+				D781297D2060FCEA002E9FA9 /* Products */,
+				A0122D8BDF9415381827DE42 /* Pods */,
+				75EB17FB52313B22BB9CA537 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D781297D2060FCEA002E9FA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D781297C2060FCEA002E9FA9 /* Promised Land.app */,
+				D78129902060FCEA002E9FA9 /* Promised LandTests.xctest */,
+				D781299B2060FCEA002E9FA9 /* Promised LandUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D781297E2060FCEA002E9FA9 /* Promised Land */ = {
+			isa = PBXGroup;
+			children = (
+				D75BEFC32063AC890070F05F /* GoogleService-Info.plist */,
+				D75836FA2061735C0035EE28 /* Promised Land.entitlements */,
+				D781297F2060FCEA002E9FA9 /* AppDelegate.swift */,
+				D78129832060FCEA002E9FA9 /* Main.storyboard */,
+				D78129862060FCEA002E9FA9 /* Assets.xcassets */,
+				D78129882060FCEA002E9FA9 /* LaunchScreen.storyboard */,
+				D781298B2060FCEA002E9FA9 /* Info.plist */,
+			);
+			path = "Promised Land";
+			sourceTree = "<group>";
+		};
+		D78129932060FCEA002E9FA9 /* Promised LandTests */ = {
+			isa = PBXGroup;
+			children = (
+				D78129942060FCEA002E9FA9 /* Promised_LandTests.swift */,
+				D78129962060FCEA002E9FA9 /* Info.plist */,
+			);
+			path = "Promised LandTests";
+			sourceTree = "<group>";
+		};
+		D781299E2060FCEA002E9FA9 /* Promised LandUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D781299F2060FCEA002E9FA9 /* Promised_LandUITests.swift */,
+				D78129A12060FCEA002E9FA9 /* Info.plist */,
+			);
+			path = "Promised LandUITests";
+			sourceTree = "<group>";
+		};
+		D78129AD206104B0002E9FA9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D78129AE206104B0002E9FA9 /* Extensions.swift */,
+			);
+			name = Extensions;
+			path = "Promised Land/Extensions";
+			sourceTree = "<group>";
+		};
+		D78129AF206104B0002E9FA9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D78129B22061074A002E9FA9 /* WelcomeController.swift */,
+				D79A3E6E2062498D0061DAA4 /* MessageController.swift */,
+				D79A3E6F2062498D0061DAA4 /* MessageController.xib */,
+				D7252C82206135A200AFDDF2 /* MapController.swift */,
+			);
+			name = ViewControllers;
+			path = "Promised Land/ViewControllers";
+			sourceTree = "<group>";
+		};
+		D78129B0206104B0002E9FA9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D7252C862061572400AFDDF2 /* MonitorLocation.swift */,
+				D75BEFC52063B5A50070F05F /* Server.swift */,
+			);
+			name = Support;
+			path = "Promised Land/Support";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D781297B2060FCEA002E9FA9 /* Promised Land */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D78129A42060FCEA002E9FA9 /* Build configuration list for PBXNativeTarget "Promised Land" */;
+			buildPhases = (
+				E680854977F678486663A83F /* [CP] Check Pods Manifest.lock */,
+				D78129782060FCEA002E9FA9 /* Sources */,
+				D78129792060FCEA002E9FA9 /* Frameworks */,
+				D781297A2060FCEA002E9FA9 /* Resources */,
+				300796AE26BAD5B542529D75 /* [CP] Embed Pods Frameworks */,
+				F862687ADB6906EE2428A884 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Promised Land";
+			productName = "Promised Land";
+			productReference = D781297C2060FCEA002E9FA9 /* Promised Land.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D781298F2060FCEA002E9FA9 /* Promised LandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D78129A72060FCEA002E9FA9 /* Build configuration list for PBXNativeTarget "Promised LandTests" */;
+			buildPhases = (
+				D24F2D96726F13A3BA81FB8C /* [CP] Check Pods Manifest.lock */,
+				D781298C2060FCEA002E9FA9 /* Sources */,
+				D781298D2060FCEA002E9FA9 /* Frameworks */,
+				D781298E2060FCEA002E9FA9 /* Resources */,
+				7D41DC244E334F50C8BAAEA7 /* [CP] Embed Pods Frameworks */,
+				09EAE488B4C75347E27351C2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D78129922060FCEA002E9FA9 /* PBXTargetDependency */,
+			);
+			name = "Promised LandTests";
+			productName = "Promised LandTests";
+			productReference = D78129902060FCEA002E9FA9 /* Promised LandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D781299A2060FCEA002E9FA9 /* Promised LandUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D78129AA2060FCEA002E9FA9 /* Build configuration list for PBXNativeTarget "Promised LandUITests" */;
+			buildPhases = (
+				0DF7E84091B9CD25401851AA /* [CP] Check Pods Manifest.lock */,
+				D78129972060FCEA002E9FA9 /* Sources */,
+				D78129982060FCEA002E9FA9 /* Frameworks */,
+				D78129992060FCEA002E9FA9 /* Resources */,
+				5288737F0D77DBCEA4D7D8C1 /* [CP] Embed Pods Frameworks */,
+				20BCD65AAEE0C0D0404452FB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D781299D2060FCEA002E9FA9 /* PBXTargetDependency */,
+			);
+			name = "Promised LandUITests";
+			productName = "Promised LandUITests";
+			productReference = D781299B2060FCEA002E9FA9 /* Promised LandUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D78129742060FCEA002E9FA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Dai Pham";
+				TargetAttributes = {
+					D781297B2060FCEA002E9FA9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					D781298F2060FCEA002E9FA9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D781297B2060FCEA002E9FA9;
+					};
+					D781299A2060FCEA002E9FA9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D781297B2060FCEA002E9FA9;
+					};
+				};
+			};
+			buildConfigurationList = D78129772060FCEA002E9FA9 /* Build configuration list for PBXProject "Promised Land" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D78129732060FCEA002E9FA9;
+			productRefGroup = D781297D2060FCEA002E9FA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D781297B2060FCEA002E9FA9 /* Promised Land */,
+				D781298F2060FCEA002E9FA9 /* Promised LandTests */,
+				D781299A2060FCEA002E9FA9 /* Promised LandUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D781297A2060FCEA002E9FA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D781298A2060FCEA002E9FA9 /* LaunchScreen.storyboard in Resources */,
+				D78129872060FCEA002E9FA9 /* Assets.xcassets in Resources */,
+				D79A3E712062498E0061DAA4 /* MessageController.xib in Resources */,
+				CEE27F98206236EF00C0383B /* location.gpx in Resources */,
+				D78129852060FCEA002E9FA9 /* Main.storyboard in Resources */,
+				D75BEFC42063AC890070F05F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D781298E2060FCEA002E9FA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78129992060FCEA002E9FA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09EAE488B4C75347E27351C2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Promised LandTests/Pods-Promised LandTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0DF7E84091B9CD25401851AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Promised LandUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20BCD65AAEE0C0D0404452FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Promised LandUITests/Pods-Promised LandUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		300796AE26BAD5B542529D75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Promised Land/Pods-Promised Land-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Promised Land/Pods-Promised Land-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5288737F0D77DBCEA4D7D8C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Promised LandUITests/Pods-Promised LandUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D41DC244E334F50C8BAAEA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Promised LandTests/Pods-Promised LandTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D24F2D96726F13A3BA81FB8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Promised LandTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E680854977F678486663A83F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Promised Land-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F862687ADB6906EE2428A884 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Promised Land/Pods-Promised Land-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D78129782060FCEA002E9FA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D75BEFC62063B5A50070F05F /* Server.swift in Sources */,
+				D78129B1206104B0002E9FA9 /* Extensions.swift in Sources */,
+				D79A3E702062498E0061DAA4 /* MessageController.swift in Sources */,
+				D78129B32061074A002E9FA9 /* WelcomeController.swift in Sources */,
+				D7252C872061572400AFDDF2 /* MonitorLocation.swift in Sources */,
+				D7252C83206135A200AFDDF2 /* MapController.swift in Sources */,
+				D78129802060FCEA002E9FA9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D781298C2060FCEA002E9FA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78129952060FCEA002E9FA9 /* Promised_LandTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78129972060FCEA002E9FA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78129A02060FCEA002E9FA9 /* Promised_LandUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D78129922060FCEA002E9FA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D781297B2060FCEA002E9FA9 /* Promised Land */;
+			targetProxy = D78129912060FCEA002E9FA9 /* PBXContainerItemProxy */;
+		};
+		D781299D2060FCEA002E9FA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D781297B2060FCEA002E9FA9 /* Promised Land */;
+			targetProxy = D781299C2060FCEA002E9FA9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D78129832060FCEA002E9FA9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D78129842060FCEA002E9FA9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D78129882060FCEA002E9FA9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D78129892060FCEA002E9FA9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D78129A22060FCEA002E9FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D78129A32060FCEA002E9FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D78129A52060FCEA002E9FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF56549BF9529256148FF85 /* Pods-Promised Land.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Promised Land/Promised Land.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ7GKVVUV5;
+				INFOPLIST_FILE = "Promised Land/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.promisedland.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D78129A62060FCEA002E9FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECAE534C336A93F6A9BBBFB4 /* Pods-Promised Land.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Promised Land/Promised Land.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ7GKVVUV5;
+				INFOPLIST_FILE = "Promised Land/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.promisedland.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D78129A82060FCEA002E9FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F07C45C37B73AFB48F2C0D /* Pods-Promised LandTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZR6QDY93JK;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseMessaging\"",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+				);
+				INFOPLIST_FILE = "Promised LandTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "promisedland.com.Promised-LandTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Promised Land.app/Promised Land";
+			};
+			name = Debug;
+		};
+		D78129A92060FCEA002E9FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F1B7CE97DCA4ED40C0F2AD /* Pods-Promised LandTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZR6QDY93JK;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseMessaging\"",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+				);
+				INFOPLIST_FILE = "Promised LandTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "promisedland.com.Promised-LandTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Promised Land.app/Promised Land";
+			};
+			name = Release;
+		};
+		D78129AB2060FCEA002E9FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742ACE49E3B79C0ED4F0F766 /* Pods-Promised LandUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Promised LandUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "promisedland.com.Promised-LandUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Promised Land";
+			};
+			name = Debug;
+		};
+		D78129AC2060FCEA002E9FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EF201D3380809BFA956718B /* Pods-Promised LandUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Promised LandUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "promisedland.com.Promised-LandUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Promised Land";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D78129772060FCEA002E9FA9 /* Build configuration list for PBXProject "Promised Land" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78129A22060FCEA002E9FA9 /* Debug */,
+				D78129A32060FCEA002E9FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D78129A42060FCEA002E9FA9 /* Build configuration list for PBXNativeTarget "Promised Land" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78129A52060FCEA002E9FA9 /* Debug */,
+				D78129A62060FCEA002E9FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D78129A72060FCEA002E9FA9 /* Build configuration list for PBXNativeTarget "Promised LandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78129A82060FCEA002E9FA9 /* Debug */,
+				D78129A92060FCEA002E9FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D78129AA2060FCEA002E9FA9 /* Build configuration list for PBXNativeTarget "Promised LandUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78129AB2060FCEA002E9FA9 /* Debug */,
+				D78129AC2060FCEA002E9FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D78129742060FCEA002E9FA9 /* Project object */;
+}
