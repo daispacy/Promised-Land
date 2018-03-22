@@ -4,10 +4,9 @@
 target 'Promised Land' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Alamofire', '= 4.5.1'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
-  pod 'Firebase/Messaging'
+  pod 'FirebaseUI/Database'
   pod 'Localize-Swift', '= 2.0'
 
   # Pods for Promised Land

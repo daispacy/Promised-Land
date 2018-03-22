@@ -14,6 +14,10 @@ class MapController: UIViewController {
     // MARK: - api
     
     // MARK: - action
+    func touchQuestion(_ sender:UIButton) {
+        
+    }
+    
     func tapAction(_ gestureReconizer:UITapGestureRecognizer) {
         let location = gestureReconizer.location(in:mapView)
         let coordinate = mapView.convert(location,toCoordinateFrom: mapView)
@@ -93,7 +97,7 @@ class MapController: UIViewController {
         }
     }
     
-    private func dropPinZoomIn(placemark:MKPlacemark){
+    fileprivate func dropPinZoomIn(placemark:MKPlacemark){
         // cache the pin
         selectedPin = placemark
         
@@ -118,6 +122,13 @@ class MapController: UIViewController {
         
         searchBar.delegate = self
         mapView.delegate = self
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.isHidden = true
+        
+        btnQuestion.addTarget(self, action: #selector(touchQuestion(_:)), for: .touchUpInside)
+        
         
         MonitorLocation.shared.onCurrentLocation = {[weak self] location in
             guard let _self = self else {return}
@@ -173,6 +184,9 @@ class MapController: UIViewController {
     // MARK: - outlet
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var btnQuestion: UIButton!
+    @IBOutlet weak var trailingSearchBar: NSLayoutConstraint!
 }
 
 // MARK: -
@@ -182,16 +196,21 @@ extension MapController:MKMapViewDelegate {
             //return nil so map view draws "blue dot" for standard user location
             return nil
         }
+        var pinView: MKAnnotationView
         let reuseId = "pin"
-        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
-        pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-        pinView?.pinTintColor = UIColor.orange
-        pinView?.canShowCallout = true
+        if let dequepinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) {
+            dequepinView.annotation = annotation
+            pinView = dequepinView
+        } else {
+            pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView.canShowCallout = true
+        }
         let smallSquare = CGSize(width: 30, height: 30)
         let button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
         button.setBackgroundImage(#imageLiteral(resourceName: "direction").resizeImageWith(newSize: CGSize(width: 20, height: 20)), for: .normal)
         button.addTarget(self, action: #selector(getDirections(_:)), for: .touchUpInside)
-        pinView?.leftCalloutAccessoryView = button
+        pinView.leftCalloutAccessoryView = button
+        pinView.image = #imageLiteral(resourceName: "pin").resizeImageWith(newSize: CGSize(width: 20, height: 20)).tint(with: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1))
         return pinView
     }
     
@@ -233,7 +252,72 @@ extension MapController: UISearchBarDelegate {
                 return
             }
             self.matchingItems = response.mapItems
-            print(self.matchingItems)
+            self.tableView.isHidden =  self.matchingItems.count == 0
+            self.tableView.reloadData()
+        }
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.setShowsCancelButton(true, animated: true)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.trailingSearchBar.constant = 0
+            searchBar.searchBarStyle = .default
+            self.view.layoutIfNeeded()
+        })
+        return true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.setShowsCancelButton(false, animated: true)
+        tableView.isHidden = true
+        searchBar.resignFirstResponder()
+        UIView.animate(withDuration: 0.2, animations: {
+            self.trailingSearchBar.constant = 60
+            searchBar.searchBarStyle = .minimal
+            self.view.layoutIfNeeded()
+        })
+    }
+}
+
+// MARK: -
+extension MapController: UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = self.matchingItems[indexPath.row]
+        self.dropPinZoomIn(placemark:item.placemark)
+        searchBar.text = ""
+        searchBar.setShowsCancelButton(false, animated: true)
+        tableView.isHidden = true
+        searchBar.resignFirstResponder()
+        UIView.animate(withDuration: 0.2, animations: {
+            self.trailingSearchBar.constant = 60
+            self.searchBar.searchBarStyle = .minimal
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return matchingItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        
+        let item = matchingItems[indexPath.row]
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = parseAddress(selectedItem: item.placemark)
+        return cell
+    }
+}
+
+// MARK: -
+extension MapController:UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if searchBar.isFirstResponder {
+            searchBar.resignFirstResponder()
+            if let cancelButton = searchBar.value(forKey: "cancelButton") as? UIButton {
+                cancelButton.isEnabled = true
+            }
         }
     }
 }

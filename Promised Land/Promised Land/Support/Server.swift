@@ -11,14 +11,14 @@ import Firebase
 
 class Server: NSObject {
 
-    class func getListTeams(_ completion:((Any?)->Void)?) {
+    class func getListTeams(_ completion:((Any?, DatabaseReference)->Void)?) {
         var ref: DatabaseReference!
         
         ref = Database.database().reference()
         _ = ref.child("Teams").observe(.value, with: { snapshot in
-            for (i,team) in snapshot.children.enumerated() {
+            for (team) in snapshot.children.enumerated() {
                 print(team)
-                completion?(team)
+                completion?(team,ref)
             }
             
         })

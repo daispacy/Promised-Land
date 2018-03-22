@@ -14,8 +14,14 @@
 		D7252C8520613C8200AFDDF2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7252C8420613C8200AFDDF2 /* MapKit.framework */; };
 		D7252C872061572400AFDDF2 /* MonitorLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7252C862061572400AFDDF2 /* MonitorLocation.swift */; };
 		D7252C8C206168C500AFDDF2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7252C8B206168C500AFDDF2 /* CoreLocation.framework */; };
+		D72BF496206407640028394C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF495206407640028394C /* Team.swift */; };
+		D72BF498206407720028394C /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF497206407720028394C /* Station.swift */; };
+		D72BF49A206409580028394C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF499206409580028394C /* Location.swift */; };
+		D72BF49C2064162B0028394C /* TeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF49B2064162B0028394C /* TeamsController.swift */; };
+		D72BF4A1206418E50028394C /* TeamsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF49F206418E50028394C /* TeamsCell.swift */; };
+		D72BF4A2206418E50028394C /* TeamsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72BF4A0206418E50028394C /* TeamsCell.xib */; };
+		D72BF4A42064242A0028394C /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF4A32064242A0028394C /* Support.swift */; };
 		D75BEFC42063AC890070F05F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75BEFC32063AC890070F05F /* GoogleService-Info.plist */; };
-		D75BEFC62063B5A50070F05F /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BEFC52063B5A50070F05F /* Server.swift */; };
 		D78129802060FCEA002E9FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D781297F2060FCEA002E9FA9 /* AppDelegate.swift */; };
 		D78129852060FCEA002E9FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78129832060FCEA002E9FA9 /* Main.storyboard */; };
 		D78129872060FCEA002E9FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78129862060FCEA002E9FA9 /* Assets.xcassets */; };
@@ -60,9 +66,15 @@
 		D7252C8420613C8200AFDDF2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D7252C862061572400AFDDF2 /* MonitorLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorLocation.swift; sourceTree = "<group>"; };
 		D7252C8B206168C500AFDDF2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D72BF495206407640028394C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		D72BF497206407720028394C /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		D72BF499206409580028394C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		D72BF49B2064162B0028394C /* TeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsController.swift; sourceTree = "<group>"; };
+		D72BF49F206418E50028394C /* TeamsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCell.swift; sourceTree = "<group>"; };
+		D72BF4A0206418E50028394C /* TeamsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsCell.xib; sourceTree = "<group>"; };
+		D72BF4A32064242A0028394C /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 		D75836FA2061735C0035EE28 /* Promised Land.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Promised Land.entitlements"; sourceTree = "<group>"; };
 		D75BEFC32063AC890070F05F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D75BEFC52063B5A50070F05F /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		D781297C2060FCEA002E9FA9 /* Promised Land.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Promised Land.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D781297F2060FCEA002E9FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D78129842060FCEA002E9FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,9 +149,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D72BF4942064074C0028394C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D72BF495206407640028394C /* Team.swift */,
+				D72BF497206407720028394C /* Station.swift */,
+				D72BF499206409580028394C /* Location.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		D72BF49D206418BF0028394C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D72BF49E206418C70028394C /* TeamsCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D72BF49E206418C70028394C /* TeamsCell */ = {
+			isa = PBXGroup;
+			children = (
+				D72BF49F206418E50028394C /* TeamsCell.swift */,
+				D72BF4A0206418E50028394C /* TeamsCell.xib */,
+			);
+			path = TeamsCell;
+			sourceTree = "<group>";
+		};
 		D78129732060FCEA002E9FA9 = {
 			isa = PBXGroup;
 			children = (
+				D72BF49D206418BF0028394C /* Views */,
+				D72BF4942064074C0028394C /* Objects */,
 				CEE27F97206236EF00C0383B /* location.gpx */,
 				D78129AD206104B0002E9FA9 /* Extensions */,
 				D78129B0206104B0002E9FA9 /* Support */,
@@ -211,6 +252,7 @@
 				D79A3E6E2062498D0061DAA4 /* MessageController.swift */,
 				D79A3E6F2062498D0061DAA4 /* MessageController.xib */,
 				D7252C82206135A200AFDDF2 /* MapController.swift */,
+				D72BF49B2064162B0028394C /* TeamsController.swift */,
 			);
 			name = ViewControllers;
 			path = "Promised Land/ViewControllers";
@@ -220,7 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				D7252C862061572400AFDDF2 /* MonitorLocation.swift */,
-				D75BEFC52063B5A50070F05F /* Server.swift */,
+				D72BF4A32064242A0028394C /* Support.swift */,
 			);
 			name = Support;
 			path = "Promised Land/Support";
@@ -353,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72BF4A2206418E50028394C /* TeamsCell.xib in Resources */,
 				D781298A2060FCEA002E9FA9 /* LaunchScreen.storyboard in Resources */,
 				D78129872060FCEA002E9FA9 /* Assets.xcassets in Resources */,
 				D79A3E712062498E0061DAA4 /* MessageController.xib in Resources */,
@@ -434,19 +477,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Promised Land/Pods-Promised Land-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -543,10 +582,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75BEFC62063B5A50070F05F /* Server.swift in Sources */,
+				D72BF498206407720028394C /* Station.swift in Sources */,
+				D72BF49A206409580028394C /* Location.swift in Sources */,
 				D78129B1206104B0002E9FA9 /* Extensions.swift in Sources */,
 				D79A3E702062498E0061DAA4 /* MessageController.swift in Sources */,
 				D78129B32061074A002E9FA9 /* WelcomeController.swift in Sources */,
+				D72BF4A42064242A0028394C /* Support.swift in Sources */,
+				D72BF49C2064162B0028394C /* TeamsController.swift in Sources */,
+				D72BF496206407640028394C /* Team.swift in Sources */,
+				D72BF4A1206418E50028394C /* TeamsCell.swift in Sources */,
 				D7252C872061572400AFDDF2 /* MonitorLocation.swift in Sources */,
 				D7252C83206135A200AFDDF2 /* MapController.swift in Sources */,
 				D78129802060FCEA002E9FA9 /* AppDelegate.swift in Sources */,
@@ -717,6 +761,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Promised Land/Promised Land.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ7GKVVUV5;
 				INFOPLIST_FILE = "Promised Land/Info.plist";
@@ -724,6 +769,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.promisedland.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -735,6 +781,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Promised Land/Promised Land.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ7GKVVUV5;
 				INFOPLIST_FILE = "Promised Land/Info.plist";
@@ -742,6 +789,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.promisedland.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
