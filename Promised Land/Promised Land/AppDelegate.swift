@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
         MonitorLocation.shared.onDidEnterRegion = {
-            self.showNotification(msg: "enter region")
+            self.showNotification(msg: "Congratulations. You get a new challenge")
         }
     }
 
@@ -74,7 +74,7 @@ extension AppDelegate {
     func showNotification(msg:String) {
         let center = UNUserNotificationCenter.current()
         let content = UNMutableNotificationContent()
-        content.title = "Congrat you have a new questions!!!"
+        content.title = "Hey!, Are you there?"
         content.body = msg
         content.categoryIdentifier = "alarm"
         content.userInfo = ["customData": "fizzbuzz"]

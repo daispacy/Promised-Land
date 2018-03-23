@@ -52,13 +52,15 @@ extension Team {
             team.team_photo = data
         }
         
+        var listStation:[Station] = []
         if snapshot.hasChild("Station") {
             for snap in snapshot.childSnapshot(forPath: "Station").children {
                 if let station = Station.parse(snap as! DataSnapshot) {
-                    team.station.append(station)
+                    listStation.append(station)
                 }
             }
         }
+        team.station = listStation.sorted(by: {$0.id < $1.id})
         
         return team
     }

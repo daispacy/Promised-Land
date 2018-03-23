@@ -22,6 +22,7 @@
 		D72BF4A2206418E50028394C /* TeamsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72BF4A0206418E50028394C /* TeamsCell.xib */; };
 		D72BF4A42064242A0028394C /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF4A32064242A0028394C /* Support.swift */; };
 		D75BEFC42063AC890070F05F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75BEFC32063AC890070F05F /* GoogleService-Info.plist */; };
+		D76E0BBE2064F8FC00D0DF49 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E0BBD2064F8FC00D0DF49 /* ImageViewController.swift */; };
 		D78129802060FCEA002E9FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D781297F2060FCEA002E9FA9 /* AppDelegate.swift */; };
 		D78129852060FCEA002E9FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78129832060FCEA002E9FA9 /* Main.storyboard */; };
 		D78129872060FCEA002E9FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78129862060FCEA002E9FA9 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		D72BF4A32064242A0028394C /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 		D75836FA2061735C0035EE28 /* Promised Land.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Promised Land.entitlements"; sourceTree = "<group>"; };
 		D75BEFC32063AC890070F05F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D76E0BBD2064F8FC00D0DF49 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		D781297C2060FCEA002E9FA9 /* Promised Land.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Promised Land.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D781297F2060FCEA002E9FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D78129842060FCEA002E9FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				D79A3E6F2062498D0061DAA4 /* MessageController.xib */,
 				D7252C82206135A200AFDDF2 /* MapController.swift */,
 				D72BF49B2064162B0028394C /* TeamsController.swift */,
+				D76E0BBD2064F8FC00D0DF49 /* ImageViewController.swift */,
 			);
 			name = ViewControllers;
 			path = "Promised Land/ViewControllers";
@@ -588,6 +591,7 @@
 				D79A3E702062498E0061DAA4 /* MessageController.swift in Sources */,
 				D78129B32061074A002E9FA9 /* WelcomeController.swift in Sources */,
 				D72BF4A42064242A0028394C /* Support.swift in Sources */,
+				D76E0BBE2064F8FC00D0DF49 /* ImageViewController.swift in Sources */,
 				D72BF49C2064162B0028394C /* TeamsController.swift in Sources */,
 				D72BF496206407640028394C /* Team.swift in Sources */,
 				D72BF4A1206418E50028394C /* TeamsCell.swift in Sources */,

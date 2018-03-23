@@ -38,7 +38,7 @@ class MonitorLocation: NSObject {
     
     func stopMonitoring() {
         for region in locationManager.monitoredRegions {
-            guard let circularRegion = region as? CLCircularRegion, circularRegion.isEqual(currentCircularRegionTracking) else { continue }
+            guard let circularRegion = region as? CLCircularRegion, circularRegion.identifier == CURRENT_REGION else { continue }
             locationManager.stopMonitoring(for: circularRegion)
             print("STOP TRACKING")
         }

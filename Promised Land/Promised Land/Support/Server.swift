@@ -15,7 +15,10 @@ class Server: NSObject {
         var ref: DatabaseReference!
         
         ref = Database.database().reference()
-        _ = ref.child("Teams").observe(.value, with: { snapshot in
+        ref.child("Welcome").observeSingleEvent(of: .value) { (snapshot) in
+            
+        }
+        _ = ref.child("Welcome").observe(.value, with: { snapshot in
             for (team) in snapshot.children.enumerated() {
                 print(team)
                 completion?(team,ref)

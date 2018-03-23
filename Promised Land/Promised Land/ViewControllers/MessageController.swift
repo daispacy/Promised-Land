@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
+
+protocol MesssageControllerDelegate:class {
+    func messageControllerStart()
+    func messageControllerShouldMinimize()
+    func messageControllerExitZone()
+}
 
 class MessageController: UIViewController {
 
     // MARK: - api
 
     // MARK: - action
+    func touchStart(_ sender:UIButton) {
+        delegate?.messageControllerShouldMinimize()
+        dismiss(animated: false, completion: nil)
+    }
+    
     func tapAction(_ sender:UITapGestureRecognizer) {
-        onDissmiss?()
+        delegate?.messageControllerShouldMinimize()
         dismiss(animated: false, completion: nil)
     }
     
@@ -22,19 +34,8 @@ class MessageController: UIViewController {
     private func config() {
         
         view.alpha = 0
-        vwBG.alpha = 0
         
-        vwContent.layer.shadowColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).cgColor
-        vwContent.layer.shadowOffset = CGSize(width:0.5, height:4.0)
-        vwContent.layer.shadowOpacity = 0.5
-        vwContent.layer.shadowRadius = 5.0
-        vwContent.layer.cornerRadius = 5
-        
-        lblTitle.font = UIFont.boldSystemFont(ofSize: 18)
-        lblTitle.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        
-        lblMessage.font = UIFont.systemFont(ofSize: 16)
-        lblMessage.textColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+        imageBG.isUserInteractionEnabled = true
         
         if let title = titleMessage {
             lblTitle.text = title
@@ -66,47 +67,47 @@ class MessageController: UIViewController {
         
         MonitorLocation.shared.onDidExitRegion = {[weak self] in
             guard let _self = self else {return}
+            _self.delegate?.messageControllerExitZone()
             _self.dismiss(animated: false, completion: nil)
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        AudioServicesPlayAlertSound(SystemSoundID(1322))
+        
         self.view.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         UIView.animate(withDuration: 0.2, animations: {
             self.view.alpha = 1
             self.view.transform = .identity
         })
         
-        UIView.animate(withDuration: 0.2, animations: {
-            self.vwBG.alpha = 1
-            self.view.transform = .identity
-        })
+        delegate?.messageControllerStart()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
-        vwBG.addGestureRecognizer(tapGesture)
+        imageBG.addGestureRecognizer(tapGesture)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        vwBG.removeGestureRecognizer(tapGesture)
+        imageBG.removeGestureRecognizer(tapGesture)
     }
     
     // MARK: - closures
-    var onDissmiss:(()->Void)?
     
     // MARK: - properties
+    weak var delegate:MesssageControllerDelegate?
     var tapGesture:UITapGestureRecognizer!
     var titleMessage:String? = nil
     var message:String? = nil
+    var shouldShowStartButton:Bool = true
     
     // MARK: - outlet
     @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblMessage: UILabel!
-    @IBOutlet weak var vwContent: UIView!
-    @IBOutlet weak var vwBG: UIView!
-    
+    @IBOutlet weak var lblMessage: UILabel!    
+    @IBOutlet weak var imageBG: UIImageView!
 }

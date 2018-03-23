@@ -16,12 +16,14 @@ class Station: NSObject {
     var score: Int = 0
     var id: Int = 0
     var location:Location?
+    var isFinish:Bool = false
     
     var snapshot:DataSnapshot?
     
     func toDict() -> JSON {
         if let snap = snapshot, let json = snap.value as? JSON {
             var dict = json
+            dict["isFinish"] = isFinish
             if let location = self.location {
                 dict["Location"] = location.toDict()
             }
@@ -97,6 +99,10 @@ extension Station {
         
         if let data = dictionary["Location"] as? JSON {
             team.location = Location.parseFromJSON(data)
+        }
+        
+        if let data = dictionary["isFinish"] as? Bool {
+            team.isFinish = data
         }
         
         return team
