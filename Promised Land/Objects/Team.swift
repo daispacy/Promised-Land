@@ -30,6 +30,14 @@ class Team: NSObject {
         }
         return [:]
     }
+    
+    func countStationFinish() -> Int{
+        var count: Int = 0
+        for item in station {
+            if item.isFinish {count += 1}
+        }
+        return count
+    }
 }
 
 extension Team {

@@ -19,6 +19,10 @@ class Support: NSObject {
         }
         
         if let window = appdelegate.window {
+            if let tb = UIApplication.shared.keyWindow?.rootViewController as? BaseTabbarController {
+                tb.viewControllers = nil
+            }
+            
             UIView.transition(with: window, duration: duration, options: .transitionCrossDissolve, animations: {
                 window.rootViewController?.view.removeFromSuperview()
                 window.rootViewController = nil

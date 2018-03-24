@@ -9,59 +9,18 @@
 import UIKit
 import MapKit
 
+protocol MapControllerDelegate:class {
+    func mapControllerShowMessage()
+}
+
 class MapController: UIViewController {
     
     // MARK: - api
-    func getStation(from team:Team) {
-        
-        if currentStation != nil {
-            print("Mark old region isFinish")
-            currentStation!.isFinish = true
-            MonitorLocation.shared.stopMonitoring()
-            MonitorLocation.shared.clCircularRegions.removeAll()
-            if let team = self.team {
-                for (i,st) in team.station.enumerated() {
-                    if st.id == currentStation!.id {
-                        team.station[i] = currentStation!
-                        self.team = team
-                        Support.setCacheTeam(data: team.toDict())
-                        currentStation = nil
-                        break
-                    }
-                }
-            }
-        }
-        
-        for station in team.station {
-            if station.isFinish {
-                continue
-            }
-            
-            if let _ = station.location {
-                currentStation = station
-                print("prepare next location. start show message")
-                guard let st = currentStation else {
-                    // should show message end Game
-                    self.showMessage(title: "Congratulations", message: "Congratulations to the team on goal", isStart: false)
-                    break
-                }
-                self.showMessage(title: st.title, message: st.message,isStart: true)
-                break
-            }
-        }
-        
-        // go over all region
-        if currentStation == nil {
-            // should show message end Game
-            self.showMessage(title: "Congratulations", message: "Congratulations to the team on goal", isStart: false)
-        }
-    }
     
     // MARK: - action
     func touchQuestion(_ sender:UIButton) {
         sender.isHidden = true
-        guard let station = currentStation else { return }
-        self.showMessage(title: station.title, message: station.message, isStart: true)
+        delegate?.mapControllerShowMessage()
     }
     
     func tapAction(_ gestureReconizer:UITapGestureRecognizer) {
@@ -104,37 +63,11 @@ class MapController: UIViewController {
         }
     }
     
+    func showQuestionButton(_ sender:NSNotification) {
+        btnQuestion.isHidden = false
+    }
+    
     // MARK: - private
-    private func  listernEvent() {
-        
-        let appdelegate =  UIApplication.shared.delegate as! AppDelegate
-        appdelegate.onWillEnterForceground = {[weak self] in
-            guard let _self = self else {return}
-            _self.monitorEvent()
-        }
-        
-        appdelegate.onOpenAppFromNotification = {[weak self] in
-            guard let _self = self, let team = _self.team else {return}
-            _self.getStation(from: team)
-        }
-    }
-    
-    private func monitorEvent() {
-        MonitorLocation.shared.onDidEnterRegion = {[weak self] in
-            guard let _self = self, let team = _self.team else {return}
-            _self.getStation(from: team)
-        }
-    }
-    
-    private func showMessage(title:String, message:String,isStart:Bool) {
-        let vc = MessageController(nibName: "MessageController", bundle: Bundle.main)
-        vc.titleMessage = title
-        vc.message = message
-        vc.shouldShowStartButton = isStart
-        vc.delegate = self
-        self.present(vc, animated: false, completion: nil)
-    }
-    
     fileprivate func dropPinZoomIn(placemark:MKPlacemark){
         // cache the pin
         selectedPin = placemark
@@ -205,9 +138,9 @@ class MapController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(showQuestionButton(_:)), name: NSNotification.Name("App:MapController:ShowQuestionButton"), object: nil)
+        
         config()
-        monitorEvent()
-        listernEvent()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -217,19 +150,10 @@ class MapController: UIViewController {
 //            guard let _self = self else {return}
 //
 //        }
-        
-        if self.team == nil {
-            if let json = Support.getCacheTeam, let tt = Team.parseFromJSON(json) {
-                self.team = tt
-            }
-        }
-        
-        guard let team = self.team else {
-            Support.changeRootControllerTo(viewcontroller: UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "teamController"))
-            return
-        }
-        
-        getStation(from: team)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("App:MapController:ShowQuestionButton"), object: nil)
     }
     
     // MARK: - closures
@@ -239,8 +163,8 @@ class MapController: UIViewController {
     var currentRoutes:[MKRoute] = []
     var matchingItems:[MKMapItem] = []
     var team:Team?
-    var currentStation:Station?
     var shouldShowStart:Bool = true //check user has start next sattion
+    weak var delegate:MapControllerDelegate?
     
     // MARK: - outlet
     @IBOutlet weak var searchBar: UISearchBar!
@@ -304,32 +228,6 @@ extension MapController:MKMapViewDelegate {
         let span = MKCoordinateSpanMake(0.01, 0.01)
         let region = MKCoordinateRegion(center: mapView.userLocation.coordinate, span: span)
         mapView.setRegion(region, animated: true)
-    }
-}
-
-// MARK: -
-extension MapController:MesssageControllerDelegate {
-    
-    func messageControllerStart() {
-        print("start tracking current station")
-        
-        guard let station = currentStation, let location = station.location else { return }
-        MonitorLocation.shared.stopMonitoring()
-        let region = CLCircularRegion(center: CLLocationCoordinate2DMake(location.latitude, location.longitude), radius: 200, identifier: CURRENT_REGION)
-        region.notifyOnEntry = true
-        region.notifyOnExit = false
-        MonitorLocation.shared.clCircularRegions = [region]
-        MonitorLocation.shared.startMonitoring()
-    }
-    
-    func messageControllerShouldMinimize() {
-        print("minimize question")
-        btnQuestion.isHidden = false
-        
-    }
-    
-    func messageControllerExitZone() {
-        
     }
 }
 

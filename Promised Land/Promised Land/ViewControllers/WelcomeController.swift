@@ -17,7 +17,7 @@ class WelcomeController: UIPageViewController {
         
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         view.startLoading(activityIndicatorStyle: .gray, false)
-        
+        view.isUserInteractionEnabled = false
         ref = Database.database().reference()
         ref.child("Welcome").observeSingleEvent(of: .value, with: { (snapshot) in
             var imageURLs = [String]()
@@ -29,6 +29,7 @@ class WelcomeController: UIPageViewController {
                 }
             }
             self.loaddata(imageURLs: imageURLs)
+            self.view.isUserInteractionEnabled = true
         }, withCancel: { (error) in
             print("error: \(error)")
         })

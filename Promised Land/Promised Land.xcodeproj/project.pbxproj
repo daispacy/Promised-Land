@@ -23,6 +23,13 @@
 		D72BF4A42064242A0028394C /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF4A32064242A0028394C /* Support.swift */; };
 		D75BEFC42063AC890070F05F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75BEFC32063AC890070F05F /* GoogleService-Info.plist */; };
 		D76E0BBE2064F8FC00D0DF49 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E0BBD2064F8FC00D0DF49 /* ImageViewController.swift */; };
+		D77716672066A27900D4AC05 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77716662066A27900D4AC05 /* BaseTabbarController.swift */; };
+		D77716692066C8EC00D4AC05 /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77716682066C8EC00D4AC05 /* ScoreController.swift */; };
+		D777166C2066D6C800D4AC05 /* BannerNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777166B2066D6C800D4AC05 /* BannerNoticeView.swift */; };
+		D777166E2066D6D400D4AC05 /* BannerNoticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D777166D2066D6D400D4AC05 /* BannerNoticeView.xib */; };
+		D77B46DB20661B3D00AEFFFE /* NoticeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77B46DA20661B3D00AEFFFE /* NoticeController.swift */; };
+		D77B46DF20661C8600AEFFFE /* NoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77B46DD20661C8600AEFFFE /* NoticeCell.swift */; };
+		D77B46E020661C8600AEFFFE /* NoticeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77B46DE20661C8600AEFFFE /* NoticeCell.xib */; };
 		D78129802060FCEA002E9FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D781297F2060FCEA002E9FA9 /* AppDelegate.swift */; };
 		D78129852060FCEA002E9FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78129832060FCEA002E9FA9 /* Main.storyboard */; };
 		D78129872060FCEA002E9FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78129862060FCEA002E9FA9 /* Assets.xcassets */; };
@@ -77,6 +84,13 @@
 		D75836FA2061735C0035EE28 /* Promised Land.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Promised Land.entitlements"; sourceTree = "<group>"; };
 		D75BEFC32063AC890070F05F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D76E0BBD2064F8FC00D0DF49 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		D77716662066A27900D4AC05 /* BaseTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
+		D77716682066C8EC00D4AC05 /* ScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreController.swift; sourceTree = "<group>"; };
+		D777166B2066D6C800D4AC05 /* BannerNoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerNoticeView.swift; sourceTree = "<group>"; };
+		D777166D2066D6D400D4AC05 /* BannerNoticeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerNoticeView.xib; sourceTree = "<group>"; };
+		D77B46DA20661B3D00AEFFFE /* NoticeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeController.swift; sourceTree = "<group>"; };
+		D77B46DD20661C8600AEFFFE /* NoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCell.swift; sourceTree = "<group>"; };
+		D77B46DE20661C8600AEFFFE /* NoticeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeCell.xib; sourceTree = "<group>"; };
 		D781297C2060FCEA002E9FA9 /* Promised Land.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Promised Land.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D781297F2060FCEA002E9FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D78129842060FCEA002E9FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +178,8 @@
 		D72BF49D206418BF0028394C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D777166A2066D6AE00D4AC05 /* BannerNoticeView */,
+				D77B46DC20661C6400AEFFFE /* NoticeCell */,
 				D72BF49E206418C70028394C /* TeamsCell */,
 			);
 			path = Views;
@@ -176,6 +192,24 @@
 				D72BF4A0206418E50028394C /* TeamsCell.xib */,
 			);
 			path = TeamsCell;
+			sourceTree = "<group>";
+		};
+		D777166A2066D6AE00D4AC05 /* BannerNoticeView */ = {
+			isa = PBXGroup;
+			children = (
+				D777166B2066D6C800D4AC05 /* BannerNoticeView.swift */,
+				D777166D2066D6D400D4AC05 /* BannerNoticeView.xib */,
+			);
+			path = BannerNoticeView;
+			sourceTree = "<group>";
+		};
+		D77B46DC20661C6400AEFFFE /* NoticeCell */ = {
+			isa = PBXGroup;
+			children = (
+				D77B46DD20661C8600AEFFFE /* NoticeCell.swift */,
+				D77B46DE20661C8600AEFFFE /* NoticeCell.xib */,
+			);
+			path = NoticeCell;
 			sourceTree = "<group>";
 		};
 		D78129732060FCEA002E9FA9 = {
@@ -256,6 +290,9 @@
 				D7252C82206135A200AFDDF2 /* MapController.swift */,
 				D72BF49B2064162B0028394C /* TeamsController.swift */,
 				D76E0BBD2064F8FC00D0DF49 /* ImageViewController.swift */,
+				D77B46DA20661B3D00AEFFFE /* NoticeController.swift */,
+				D77716662066A27900D4AC05 /* BaseTabbarController.swift */,
+				D77716682066C8EC00D4AC05 /* ScoreController.swift */,
 			);
 			name = ViewControllers;
 			path = "Promised Land/ViewControllers";
@@ -403,6 +440,8 @@
 				D78129872060FCEA002E9FA9 /* Assets.xcassets in Resources */,
 				D79A3E712062498E0061DAA4 /* MessageController.xib in Resources */,
 				CEE27F98206236EF00C0383B /* location.gpx in Resources */,
+				D77B46E020661C8600AEFFFE /* NoticeCell.xib in Resources */,
+				D777166E2066D6D400D4AC05 /* BannerNoticeView.xib in Resources */,
 				D78129852060FCEA002E9FA9 /* Main.storyboard in Resources */,
 				D75BEFC42063AC890070F05F /* GoogleService-Info.plist in Resources */,
 			);
@@ -585,15 +624,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77716672066A27900D4AC05 /* BaseTabbarController.swift in Sources */,
+				D77B46DF20661C8600AEFFFE /* NoticeCell.swift in Sources */,
 				D72BF498206407720028394C /* Station.swift in Sources */,
 				D72BF49A206409580028394C /* Location.swift in Sources */,
 				D78129B1206104B0002E9FA9 /* Extensions.swift in Sources */,
 				D79A3E702062498E0061DAA4 /* MessageController.swift in Sources */,
+				D777166C2066D6C800D4AC05 /* BannerNoticeView.swift in Sources */,
 				D78129B32061074A002E9FA9 /* WelcomeController.swift in Sources */,
 				D72BF4A42064242A0028394C /* Support.swift in Sources */,
 				D76E0BBE2064F8FC00D0DF49 /* ImageViewController.swift in Sources */,
 				D72BF49C2064162B0028394C /* TeamsController.swift in Sources */,
+				D77716692066C8EC00D4AC05 /* ScoreController.swift in Sources */,
 				D72BF496206407640028394C /* Team.swift in Sources */,
+				D77B46DB20661B3D00AEFFFE /* NoticeController.swift in Sources */,
 				D72BF4A1206418E50028394C /* TeamsCell.swift in Sources */,
 				D7252C872061572400AFDDF2 /* MonitorLocation.swift in Sources */,
 				D7252C83206135A200AFDDF2 /* MapController.swift in Sources */,

@@ -22,12 +22,12 @@ class MessageController: UIViewController {
     // MARK: - action
     func touchStart(_ sender:UIButton) {
         delegate?.messageControllerShouldMinimize()
-        dismiss(animated: false, completion: nil)
+        closeView()
     }
     
     func tapAction(_ sender:UITapGestureRecognizer) {
         delegate?.messageControllerShouldMinimize()
-        dismiss(animated: false, completion: nil)
+        closeView()
     }
     
     // MARK: - private
@@ -68,8 +68,19 @@ class MessageController: UIViewController {
         MonitorLocation.shared.onDidExitRegion = {[weak self] in
             guard let _self = self else {return}
             _self.delegate?.messageControllerExitZone()
-            _self.dismiss(animated: false, completion: nil)
+            _self.closeView()
         }
+    }
+    
+    private func closeView() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.view.alpha = 0
+            self.view.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        },completion:{done in
+            if done {
+                self.dismiss(animated: false, completion: nil)
+            }
+        })
     }
     
     override func viewDidAppear(_ animated: Bool) {
