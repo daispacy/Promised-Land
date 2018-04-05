@@ -77,6 +77,9 @@ extension TeamsController:UITableViewDelegate    {
                         let noticeVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "noticeController") as! NoticeController
                         let nvNoticeVC = UINavigationController(rootViewController: noticeVC)
                         
+                        let activitiesVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "activitiesController") as! ActivitiesController
+                        let nvActivitiesVC = UINavigationController(rootViewController: activitiesVC)
+                        
                         let scoreVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "scoreController") as! ScoreController
                         
                         let itemMap = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "map").resizeImageWith(newSize: CGSize(width: 40, height: 40)).tint(with: #colorLiteral(red: 0.4352941215, green: 0.4431372583, blue: 0.4745098054, alpha: 1)), selectedImage:#imageLiteral(resourceName: "map").resizeImageWith(newSize: CGSize(width: 40, height: 40)).tint(with: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)))
@@ -85,6 +88,9 @@ extension TeamsController:UITableViewDelegate    {
                         let itemMessage = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "question").resizeImageWith(newSize: CGSize(width: 40, height: 40)).tint(with: #colorLiteral(red: 0.4352941215, green: 0.4431372583, blue: 0.4745098054, alpha: 1)), selectedImage:#imageLiteral(resourceName: "question").resizeImageWith(newSize: CGSize(width: 40, height: 40)).tint(with: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)))
                         nvNoticeVC.tabBarItem  = itemMessage
                         
+                        let itemActivities = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "activite").resizeImageWith(newSize: CGSize(width: 55, height: 55)).tint(with: #colorLiteral(red: 0.4352941215, green: 0.4431372583, blue: 0.4745098054, alpha: 1)), selectedImage:#imageLiteral(resourceName: "activite").resizeImageWith(newSize: CGSize(width: 55, height: 55)).tint(with: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)))
+                        activitiesVC.tabBarItem  = itemActivities
+                        
                         let itemGoal = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "goal").resizeImageWith(newSize: CGSize(width: 35, height: 35)).tint(with: #colorLiteral(red: 0.4352941215, green: 0.4431372583, blue: 0.4745098054, alpha: 1)), selectedImage:#imageLiteral(resourceName: "goal").resizeImageWith(newSize: CGSize(width: 35, height: 35)).tint(with: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)))
                         scoreVC.tabBarItem  = itemGoal
                         
@@ -92,24 +98,28 @@ extension TeamsController:UITableViewDelegate    {
                         mapVC.delegate = tc
                         noticeVC.delegate = tc
                         scoreVC.delegate = tc
+                        activitiesVC.delegate = tc
                         
                         if #available(iOS 11.0, *) {
                             if UI_USER_INTERFACE_IDIOM() != .pad {
                                 mapVC.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
                                 nvNoticeVC.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
                                 scoreVC.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+                                nvActivitiesVC.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
                             }
                         } else {
                             mapVC.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
                             nvNoticeVC.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
                             scoreVC.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+                            nvActivitiesVC.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
                         }
                         
                         mapVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.clear], for: UIControlState())
                         nvNoticeVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.clear], for: UIControlState())
                         scoreVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.clear], for: UIControlState())
+                        activitiesVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.clear], for: UIControlState())
                         
-                        tc.setViewControllers([mapVC,nvNoticeVC,scoreVC], animated: true)
+                        tc.setViewControllers([mapVC,nvNoticeVC,nvActivitiesVC,scoreVC], animated: true)
                         Support.changeRootControllerTo(viewcontroller: tc, animated: true, nil)
                     }
                 })

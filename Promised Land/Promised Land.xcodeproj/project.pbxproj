@@ -14,6 +14,9 @@
 		D7252C8520613C8200AFDDF2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7252C8420613C8200AFDDF2 /* MapKit.framework */; };
 		D7252C872061572400AFDDF2 /* MonitorLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7252C862061572400AFDDF2 /* MonitorLocation.swift */; };
 		D7252C8C206168C500AFDDF2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7252C8B206168C500AFDDF2 /* CoreLocation.framework */; };
+		D728623C20750DF2001B9C68 /* ActivitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728623B20750DF2001B9C68 /* ActivitiesController.swift */; };
+		D7286240207510B0001B9C68 /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728623E207510B0001B9C68 /* ActivitiesCell.swift */; };
+		D7286241207510B0001B9C68 /* ActivitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D728623F207510B0001B9C68 /* ActivitiesCell.xib */; };
 		D72BF496206407640028394C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF495206407640028394C /* Team.swift */; };
 		D72BF498206407720028394C /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF497206407720028394C /* Station.swift */; };
 		D72BF49A206409580028394C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF499206409580028394C /* Location.swift */; };
@@ -23,6 +26,7 @@
 		D72BF4A42064242A0028394C /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BF4A32064242A0028394C /* Support.swift */; };
 		D75BEFC42063AC890070F05F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75BEFC32063AC890070F05F /* GoogleService-Info.plist */; };
 		D76E0BBE2064F8FC00D0DF49 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E0BBD2064F8FC00D0DF49 /* ImageViewController.swift */; };
+		D776094820753EB3004EEBDC /* Melbourne.geojson in Resources */ = {isa = PBXBuildFile; fileRef = D776094720753EB3004EEBDC /* Melbourne.geojson */; };
 		D77716672066A27900D4AC05 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77716662066A27900D4AC05 /* BaseTabbarController.swift */; };
 		D77716692066C8EC00D4AC05 /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77716682066C8EC00D4AC05 /* ScoreController.swift */; };
 		D777166C2066D6C800D4AC05 /* BannerNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777166B2066D6C800D4AC05 /* BannerNoticeView.swift */; };
@@ -74,6 +78,9 @@
 		D7252C8420613C8200AFDDF2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D7252C862061572400AFDDF2 /* MonitorLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorLocation.swift; sourceTree = "<group>"; };
 		D7252C8B206168C500AFDDF2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D728623B20750DF2001B9C68 /* ActivitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesController.swift; sourceTree = "<group>"; };
+		D728623E207510B0001B9C68 /* ActivitiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
+		D728623F207510B0001B9C68 /* ActivitiesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
 		D72BF495206407640028394C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		D72BF497206407720028394C /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		D72BF499206409580028394C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -84,6 +91,7 @@
 		D75836FA2061735C0035EE28 /* Promised Land.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Promised Land.entitlements"; sourceTree = "<group>"; };
 		D75BEFC32063AC890070F05F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D76E0BBD2064F8FC00D0DF49 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		D776094720753EB3004EEBDC /* Melbourne.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Melbourne.geojson; sourceTree = "<group>"; };
 		D77716662066A27900D4AC05 /* BaseTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
 		D77716682066C8EC00D4AC05 /* ScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreController.swift; sourceTree = "<group>"; };
 		D777166B2066D6C800D4AC05 /* BannerNoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerNoticeView.swift; sourceTree = "<group>"; };
@@ -165,6 +173,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D728623D207510B0001B9C68 /* ActivitiesCell */ = {
+			isa = PBXGroup;
+			children = (
+				D728623E207510B0001B9C68 /* ActivitiesCell.swift */,
+				D728623F207510B0001B9C68 /* ActivitiesCell.xib */,
+			);
+			path = ActivitiesCell;
+			sourceTree = "<group>";
+		};
 		D72BF4942064074C0028394C /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +195,7 @@
 		D72BF49D206418BF0028394C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D728623D207510B0001B9C68 /* ActivitiesCell */,
 				D777166A2066D6AE00D4AC05 /* BannerNoticeView */,
 				D77B46DC20661C6400AEFFFE /* NoticeCell */,
 				D72BF49E206418C70028394C /* TeamsCell */,
@@ -215,6 +233,7 @@
 		D78129732060FCEA002E9FA9 = {
 			isa = PBXGroup;
 			children = (
+				D776094720753EB3004EEBDC /* Melbourne.geojson */,
 				D72BF49D206418BF0028394C /* Views */,
 				D72BF4942064074C0028394C /* Objects */,
 				CEE27F97206236EF00C0383B /* location.gpx */,
@@ -293,6 +312,7 @@
 				D77B46DA20661B3D00AEFFFE /* NoticeController.swift */,
 				D77716662066A27900D4AC05 /* BaseTabbarController.swift */,
 				D77716682066C8EC00D4AC05 /* ScoreController.swift */,
+				D728623B20750DF2001B9C68 /* ActivitiesController.swift */,
 			);
 			name = ViewControllers;
 			path = "Promised Land/ViewControllers";
@@ -443,6 +463,8 @@
 				D77B46E020661C8600AEFFFE /* NoticeCell.xib in Resources */,
 				D777166E2066D6D400D4AC05 /* BannerNoticeView.xib in Resources */,
 				D78129852060FCEA002E9FA9 /* Main.storyboard in Resources */,
+				D7286241207510B0001B9C68 /* ActivitiesCell.xib in Resources */,
+				D776094820753EB3004EEBDC /* Melbourne.geojson in Resources */,
 				D75BEFC42063AC890070F05F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +650,7 @@
 				D77B46DF20661C8600AEFFFE /* NoticeCell.swift in Sources */,
 				D72BF498206407720028394C /* Station.swift in Sources */,
 				D72BF49A206409580028394C /* Location.swift in Sources */,
+				D728623C20750DF2001B9C68 /* ActivitiesController.swift in Sources */,
 				D78129B1206104B0002E9FA9 /* Extensions.swift in Sources */,
 				D79A3E702062498E0061DAA4 /* MessageController.swift in Sources */,
 				D777166C2066D6C800D4AC05 /* BannerNoticeView.swift in Sources */,
@@ -635,6 +658,7 @@
 				D72BF4A42064242A0028394C /* Support.swift in Sources */,
 				D76E0BBE2064F8FC00D0DF49 /* ImageViewController.swift in Sources */,
 				D72BF49C2064162B0028394C /* TeamsController.swift in Sources */,
+				D7286240207510B0001B9C68 /* ActivitiesCell.swift in Sources */,
 				D77716692066C8EC00D4AC05 /* ScoreController.swift in Sources */,
 				D72BF496206407640028394C /* Team.swift in Sources */,
 				D77B46DB20661B3D00AEFFFE /* NoticeController.swift in Sources */,

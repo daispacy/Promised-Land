@@ -9,11 +9,6 @@
 import UIKit
 import Firebase
 
-protocol ScoreControllerDelegate:class {
-    func scoreControllerRequestCurrentTeam()->Team?
-}
-
-
 class ScoreController: UIViewController {
 
     // MARK: - api
@@ -40,7 +35,7 @@ class ScoreController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard let team = delegate?.scoreControllerRequestCurrentTeam() else { return }
+        guard let team = delegate?.dataDelegateRequestCurrentTeam() else { return }
         
         ref.child("Teams").observe(.value, with: { (snapshot) in
             var score = 0
@@ -59,7 +54,7 @@ class ScoreController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        guard let team = delegate?.scoreControllerRequestCurrentTeam() else { return }
+        guard let team = delegate?.dataDelegateRequestCurrentTeam() else { return }
         ref.child("Teams").child(team.team_id).removeAllObservers()
     }
     
@@ -67,7 +62,7 @@ class ScoreController: UIViewController {
     
     // MARK: - properties
     var ref: DatabaseReference!
-    weak var delegate:ScoreControllerDelegate?
+    weak var delegate:DataDelegate?
     
     // MARK: - outlet
     @IBOutlet weak var lblsubscore: UILabel!

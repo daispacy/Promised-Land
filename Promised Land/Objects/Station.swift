@@ -15,6 +15,7 @@ class Station: NSObject {
     var photo_url: String = ""
     var score: Int = 0
     var id: Int = 0
+    var activite: [String] = []
     var location:Location?
     var isFinish:Bool = false
     
@@ -24,6 +25,15 @@ class Station: NSObject {
         if let snap = snapshot, let json = snap.value as? JSON {
             var dict = json
             dict["isFinish"] = isFinish
+            if let dictionary = snap.childSnapshot(forPath: "Activite").value as? JSON {
+                var activite:[String] = []
+                for v in dictionary.values {
+                    if let data = v as? String {
+                        activite.append(data)
+                    }
+                }
+                if activite.count > 0 {dict["activite"] = activite}
+            }
             if let location = self.location {
                 dict["Location"] = location.toDict()
             }
@@ -51,6 +61,15 @@ extension Station {
         
         if let data = dictionary["Photo_url"] as? String {
             team.photo_url = data
+        }
+        
+        if let dictionary = snapshot.childSnapshot(forPath: "Activite").value as? JSON {
+            team.activite = []
+            for v in dictionary.values {
+                if let data = v as? String {
+                    team.activite.append(data)
+                }
+            }
         }
         
         if let data = dictionary["Station_ID"] as? String {
@@ -99,6 +118,10 @@ extension Station {
         
         if let data = dictionary["Location"] as? JSON {
             team.location = Location.parseFromJSON(data)
+        }
+        
+        if let data = dictionary["activite"] as? [String] {
+            team.activite = data
         }
         
         if let data = dictionary["isFinish"] as? Bool {

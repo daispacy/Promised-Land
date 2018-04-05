@@ -1,14 +1,14 @@
 //
-//  NoticeController.swift
+//  ActivitiesController.swift
 //  Promised Land
 //
-//  Created by Dai Pham on 3/24/18.
+//  Created by Dai Pham on 4/4/18.
 //  Copyright © 2018 Dai Pham. All rights reserved.
 //
 
 import UIKit
 
-class NoticeController: UIViewController {
+class ActivitiesController: UIViewController {
 
     // MARK: - api
     
@@ -19,12 +19,11 @@ class NoticeController: UIViewController {
     
     // MARK: - private
     private func config() {
-        
-        title = "Your Messages"
+        title = "Activities"
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "NoticeCell", bundle: Bundle.main), forCellReuseIdentifier: "cell")
+        tableView.register(UINib(nibName: "ActivitiesCell", bundle: Bundle.main), forCellReuseIdentifier: "cell")
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 50
     }
@@ -32,18 +31,18 @@ class NoticeController: UIViewController {
     private func load() {
         guard let team = delegate?.dataDelegateRequestCurrentTeam() else { return }
         
-        notices.removeAll()
+        activities.removeAll()
         for station in team.station {
             if station.isFinish {
-                notices.append(station)
+                continue
             } else {
-                notices.append(station)
+                activities = station.activite
+                tableView.reloadData()
                 break
             }
         }
         
-        if notices.count > 0 {
-            notices = notices.reversed()
+        if activities.count > 0 {
             tableView.backgroundView = nil
         }
         
@@ -63,7 +62,7 @@ class NoticeController: UIViewController {
         super.viewWillAppear(animated)
         
         let label = UILabel(frame: tableView.bounds)
-        label.text = "No messages"
+        label.text = "No activities"
         label.textAlignment = .center
         tableView.backgroundView = label
         
@@ -77,25 +76,25 @@ class NoticeController: UIViewController {
     // MARK: - closures
     
     // MARK: - properties
-    var notices:[Station] = []
+    var activities:[String] = []
     weak var delegate:DataDelegate?
     
     // MARK: - outlet
     @IBOutlet weak var tableView: UITableView!
-    
+
 }
 
-extension NoticeController: UITableViewDelegate, UITableViewDataSource {
+extension ActivitiesController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NoticeCell
-        let station = notices[indexPath.row]
-        cell.load(title: station.title, message: station.message, isFinish: station.isFinish)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ActivitiesCell
+        let msg = activities[indexPath.row]
+        cell.load(msg)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notices.count
+        return activities.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

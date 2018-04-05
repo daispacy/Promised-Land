@@ -10,6 +10,10 @@ import UIKit
 import MapKit
 import AVFoundation
 
+protocol DataDelegate:class {
+    func dataDelegateRequestCurrentTeam()->Team?
+}
+
 class BaseTabbarController: UITabBarController {
 
     // MARK: - api
@@ -154,12 +158,20 @@ extension BaseTabbarController:MapControllerDelegate {
 }
 
 // MARK: -
-extension BaseTabbarController:NoticeControllerDelegate,ScoreControllerDelegate {
+extension BaseTabbarController:DataDelegate {
     func noticeControllerRequestCurrentTeam() -> Team? {
         return self.team
     }
     
     func scoreControllerRequestCurrentTeam() -> Team? {
+        return self.team
+    }
+    
+    func activitiesControllerRequestCurrentTeam() -> Team? {
+        return self.team
+    }
+    
+    func dataDelegateRequestCurrentTeam() -> Team? {
         return self.team
     }
 }
